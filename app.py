@@ -1,10 +1,13 @@
 import streamlit as st
 import pickle
+import pandas as pd
+import numpy as np
 
+df = pd.read_csv("data.csv")
 st.title('Diabetic Patient Prediction Project')
 model = pickle.load(open('model.pkl','rb'))
 scaler = pickle.load(open('scaler.pkl','rb'))
-df = pd.read_csv("data.csv")
+
 
 gender = st.selectbox('Enter gender',['male','female','other'])
 if gender=='male':
