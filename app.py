@@ -5,8 +5,8 @@ import numpy as np
 
 df = pd.read_csv("data.csv")
 st.title('Diabetic Patient Prediction Project')
-model = pickle.load(open('model.pkl','rb'))
-scaler = pickle.load(open('scaler.pkl','rb'))
+model = pickle.load(open("model.pkl","rb"))
+#scaler = pickle.load(open('scaler.pkl','rb"))
 
 
 gender = st.selectbox('Enter gender',['male','female','other'])
