@@ -2,8 +2,8 @@ import streamlit as st
 import pickle as pkl
 
 st.title('Diabetic Patient Prediction Project')
-model = pkl.load(open('model.pkl','rb+'))
-scaler = pkl.load(open('scaler.pkl','rb+'))
+model = pkl.load(open('model.pkl','rb'))
+scaler = pkl.load(open('scaler.pkl','rb'))
 
 gender = st.selectbox('Enter gender',['male','female','other'])
 if gender=='male':
